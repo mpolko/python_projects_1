@@ -1,3 +1,4 @@
+#simple
 a = input("Podaj pierwszą liczbę: ")
 operator = input("Podaj operator matematyczny: ")
 b = input("Podaj drugą liczbę: ")
