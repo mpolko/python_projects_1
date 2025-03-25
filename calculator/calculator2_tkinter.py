@@ -1,5 +1,5 @@
 from tkinter import *
-#123
+
 # Tworzenie okna kalkulatora
 me = Tk()
 me.geometry("345x460")
