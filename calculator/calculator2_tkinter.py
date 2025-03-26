@@ -23,9 +23,10 @@ def equlbut():
     try:
         result = str(eval(operator, {"__builtins__": None}, {"pow": pow, "abs": abs}))
         textin.set(result)
+        operator = result #po obliczeniu wynik zapisuje się jako nowy operator - nie tracimy sumy poprzedniego działania
     except:
         textin.set("Error")
-    operator = ''
+    #operator = ''  #usuniete, poniewaz przez to kasowal sie wynik z poprzedniego dzialania
 
 # Funkcja czyszcząca pole tekstowe
 def clrbut():
