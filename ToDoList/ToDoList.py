@@ -11,16 +11,16 @@ def listTasks():
     else:
         print ("Current tasks: ")
         for index, task in enumerate(tasks):
-            print(f"Task #{index}. {task}") #+1 so list of tasks starts with 1 not 0
+            print(f"Task #{index+1}. {task}") #+1 so list of tasks starts with 1 not 0
 def deleteTask():
     listTasks()
     try:
-        taskToDelete = int(input("Enter the # to delete: "))
+        taskToDelete = int(input("Enter the # to delete: ")) - 1  #substract so it is correct value with our index
         if taskToDelete >=0 and taskToDelete < len(tasks):
             tasks.pop(taskToDelete)
-            print(f"Task {taskToDelete} has been removed.")
+            print(f"Task {taskToDelete + 1} has been removed.") #add 1 to have correct index
         else:
-            print(f"Task #{taskToDelete} was not found.")
+            print(f"Task #{taskToDelete + 1} was not found.") #add 1 to have correct index
     except:
         print("Invalid input.")
 
